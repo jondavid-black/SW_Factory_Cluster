@@ -1,0 +1,8 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Add the user 'centos' without admin group permissions
+      user:
+        name: centos
+        comment: Non-Admin Account
+        group: users
